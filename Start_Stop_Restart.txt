@@ -1,0 +1,14 @@
+The commands to start, stop and restart a systems service cronListener can be done using Systemctl in Linux.
+
+1. Start Command
+Syntax:
+sudo systemctl start cronListener
+
+2. Command Stop
+Syntax:
+sudo systemctl stop cronListener
+
+3. Restart Command
+Syntax:
+sudo systemctl restart cronListener
+
