@@ -1,0 +1,4 @@
+To retrieve a single object for a Django model called Attendee with primary key = 7, we can write this query(Assume foldername to be the name of folder) :
+
+>>> from foldername.models import Attendee
+>>> one_entry = Attendee.objects.get(pk=7)
