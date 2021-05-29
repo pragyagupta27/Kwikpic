@@ -1,0 +1,6 @@
+A bash command that reads the last 200 lines of the log file named as cron.logs in a service called cronListener:
+
+$ echo "$(tail -200 cron.log)" > cron.log
+
+$ wc -l cron.log
+200 cron.log
