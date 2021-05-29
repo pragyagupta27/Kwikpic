@@ -1,0 +1,48 @@
+a) A function that takes in the selfie name and returns the unique code.
+Sample input: paul-12345.jpg
+Output: 12345
+
+#PythonCode
+selfie_name=input("Enter Selfie name:")
+ans=""
+flag=0
+for i in selfie_name:
+    if i=='-':
+        flag=1
+        continue
+    if i=='.':
+        flag=0
+    if flag==1:
+        ans+=i
+print(ans)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+b) Uploading the image in S3 Bucket:
+
+import os
+from PIL import Image
+import boto3
+from boto.s3.key import Key
+
+def upload_to_s3(aws_access_key_id, aws_secret_access_key, file, bucket, key, callback=None, md5=None, reduced_redundancy=False, content_type=None):
+
+    conn = boto.connect_s3(aws_access_key_id, aws_secret_access_key)
+    bucket = conn.get_bucket(bucket, validate=False)
+    k = Key(bucket)
+    k.key = key
+
+    k.set_contents_from_file(file)
+
+AWS_ACCESS_KEY = "...."
+AWS_ACCESS_SECRET_KEY = "....."
+
+filename = "12345.jpg"
+file = Image.open(filename)
+
+key = "image"
+bucket = 'kwikpic_selfies'
+
+upload_to_s3(AWS_ACCESS_KEY, AWS_ACCESS_SECRET_KEY, file, bucket, key)
+
+client = boto3.client('s3', region_name='us-west-2')
+
+client.upload_file('12345.jpg', 'bucket', 'image')
