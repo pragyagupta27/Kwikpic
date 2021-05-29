@@ -1,2 +1,2 @@
 # Kwikpic
-Assignement
+Assignment
