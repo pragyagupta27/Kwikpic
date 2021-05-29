@@ -1,0 +1,18 @@
+ YES, I am familiar with command line and git.
+ 
+The 5 Git commands are:
+
+1. git init:
+The git init command creates a new Git repository.  It can also be used to transform an existing project to a Git repository or initialize a new, empty Git repository.
+
+2. git push:
+The git push command is used to upload local repository content to a remote repository.
+
+3. git commit:
+The git commit command is used for saving changes in Git. We need to indicate the file and changes need to be saved before running the Git commit command as the changes doesn't save automatically.
+
+4. git status:
+The git status command displays the state/condition of the working directory and the staging area. We can see the changes have been staged or not, and the files that aren't being tracked by Git.
+
+5. git pull:
+The git pull command is used to fetch/get and download content from a remote repository and immediately update the local repository to match that content.
